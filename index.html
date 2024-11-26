@@ -12,7 +12,28 @@
     body {
       font-family: Arial, sans-serif;
     }
+   
+    .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    width: 7rem; /* Taille du carré */
+    height: 7rem; /* Même valeur que la largeur pour un carré */
+    overflow: hidden; /* Masque les parties qui débordent */
+}
+
+.image-container img {
+    width: 100%; /* L'image occupe toute la largeur */
+    height: 100%; /* L'image occupe toute la hauteur */
+    object-fit: cover; /* Coupe l'image pour s'adapter au carré sans déformation */
+}
+
+
+/* Hover effect */
+.styled-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
     .hero {
       background-color: #007bff;
       color: white;
@@ -85,7 +106,9 @@
       </div>
     </div>
   </nav>
-
+  <div class="image-container">
+    <img src="./yassine.jpg" alt="A beautiful view" class="styled-image">
+</div>
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <h1>Welcome to My Landing Page</h1>
